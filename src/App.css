@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family : 'NotoSansKR';
+  overflow: hidden;
+}
+
+/* 페이지 & 페이지 스크롤 */
+.scroll-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  transition: transform 0.5s ease;
+}
+
+.page-one, .page-two, .page-three, .page-four, .page-five, .page-six, .page-seven{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+
+/* 1페이지 도형들 */
+.star, .circle, .square, .triangle {
+  position: absolute;
+}
+
+.star {
+  background-image: url('../public/images/Star.png');
+  width: 300px;
+  height: 294px;
+  top: 10%;
+  left: 10%;
+}
+
+.circle {
+  background-image: url('../public/images/Circle.png');
+  width: 201px;
+  height: 201px;
+  top: 10%;
+  right: 10%;
+}
+
+.square {
+  background-image: url('../public/images/Square.png');
+  width: 230px;
+  height: 230px;
+  bottom: 10%;
+  left: 16%;
+}
+
+.triangle {
+  background-image: url('../public/images/Triangle.png');
+  width: 200px;
+  height: 300px;
+  bottom: 10%;
+  right: 12%;
+}
+
+
+/* 도형 사라자고 나타나기 */
+.hidden .star, .hidden .circle, .hidden .square, .hidden .triangle {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-100%);
+}
+
+.star, .circle, .square, .triangle {
+  opacity: 1;
+  transition: transform 0.5s ease;
+}
+
+/* 폰트 사이즈 */
+.main-text {
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  background-color: transparent;
+  z-index: 3000;
+
+}
+
+.middle-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  line-height: 52px;
+  margin-bottom: 2%;
+
+}
+.small-text {
+  font-size: 1.2em;
+  line-height: 42px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 페이지들 하이라이트 */
+.highlight {
+  color: #8FFF1E;
+}
+.pink-highlight {
+  color: #FF42BF;
+}
+.blue-highlight {
+  color: #3675EF; 
+}
+
+.yell-highlight {
+  color: #FFB628;
+}
+/* 신호등 CSS */
+.green-highlight {
+  color: #00920F;
+}
+
+.yellow-highlight {
+  color: #FFA800;
+}
+
+.red-highlight {
+  color:#DC0000;
+}
+
+.traffic-lights {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  width: 900px;
+  margin-bottom: 8%;
+  filter: blur(10px);
+}
+
+.light {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+  transition: background-color 0.5s ease;
+}
+
+.light.red {
+  background-color: #DC0000;
+  filter: blur(10px);
+}
+
+.light.yellow { 
+  background-color: #FFA800;
+  filter: blur(10px);
+}
+
+.light.green {
+  background-color: #00920F;
+  filter: blur(10px);
+}
+
+.light.off {
+  background-color: black; 
+  filter: blur(10px);
+}
+
+/* 이미지 소스 */
+.character-image {
+  background-image: url('../public/images/character.png');
+  width: 1100px; 
+  height: 507.42px;
+  margin-bottom: 20px;
+}
+
+.character-gif {
+  background-image: url('../public/images/move-character.gif');
+  width: 631px; 
+  height: 360px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-repeat: no-repeat;
+  transform:scale(1.8)
+}
+
+.wind-png {
+  background-image: url('../public/images/wind.png');
+  width: 427px; 
+  height: 288px;
+  margin-bottom: 4%;
+}
+
+.people-png {
+  background-image: url('../public/images/people.png');
+  width: 553px; 
+  height: 411px;
+  margin-bottom: 4%;
+}
+
+.blink-png {
+  background-image: url('../public/images/Blink.png');
+  width: 70px;
+  height: 100px;
+  background-repeat: no-repeat;
+  margin-left: 40%;
+  margin-bottom: -3%;
+}

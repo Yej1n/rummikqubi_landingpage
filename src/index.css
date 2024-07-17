@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'NotoSansKR';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('bae/bae/src/fonts/NotoSansKR-Bold.ttf');
+}
